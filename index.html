@@ -1,8 +1,216 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<title>ACLC中文网</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACLC中文网</title>
+    <style>
+        @font-face {
+            font-family: '拾陆字濑户2.0';
+            src: url('data/fonts/拾陆字濑户2.0.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #004297;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: all 0.3s ease;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: '拾陆字濑户2.0', sans-serif;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            height: 100%;
+                line-height: 20px;
+            }
+
+            .navbar-brand span {
+                display: inline-block;
+                position: relative;
+                top: 4px;
+        }
+
+        .navbar-brand img {
+            display: block;
+            margin: auto 0;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: #ddd;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #004297;
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+        }
+
+        /* 为了防止顶栏遮挡内容 */
+        body {
+            padding-top: 6rem;
+            min-height: 100vh;
+            background-image: url('data/backgruond.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: '拾陆字濑户2.0', sans-serif;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .main-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #4a9eff;
+            font-weight: bold;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #aaa;
+            font-style: italic;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+<a href="https://qm.qq.com/q/ojkPMpJdvy" target="_blank" class="navbar-brand"><img src="data/in-web-icon.png" alt="Logo" width="25" height="25"> <span>ACLCC</span></a>
+            <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+            <div class="navbar-menu">
+                <a href="#">魔改系列</a>
+                <a href="#">魔改语法</a>
+                <a href="#">成员</a>
+            </div>
+        </div>
+    </nav>
+    <div class="home-content" style="text-align: center;">
+        <p>欢迎来到冰与火之舞中文魔改社区<br>
+            可跳转下载页下载魔改谱面文件<br>
+            <br>
+            本社区最初由Grafrustix创建<br>(时名ACLC)<br>(Adofai Cursed Levels Community)<br>
+            后因国外出现了一些魔改师<br>而更名ACLCC<br>
+            同期由Yangsy56302新建ACLGC<br>
+            <a href="https://discord.gg/7TrnX6KVCE" class="home-description">(Adofai Cursed Levels Global Community)</a><br>
+            <br>
+            本圈子致力于充分利用游戏机制<br>将《冰与火之舞》关卡<br>
+            改得像《节奏医生》的<br>"1-XN 超·东方不眠夜"那样<br>
+            (现ACLCC群主为TheHale)</p>
+	</div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            menu.classList.toggle('active');
+        }
+
+        // 滚动时隐藏/显示导航栏
+        let lastScrollPosition = 0;
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const currentScrollPosition = window.pageYOffset;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                // 向下滚动
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // 向上滚动
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollPosition = currentScrollPosition;
+        });
+    </script>
 </body>
 </html>
