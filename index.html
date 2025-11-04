@@ -11,13 +11,7 @@
             font-weight: bold;
             font-style: normal;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         .navbar {
             background-color: #004297;
             padding: 0.5rem 1rem;
@@ -28,8 +22,8 @@
             height: 60px;
             display: flex;
             align-items: center;
+            z-index: 100;
         }
-
         .navbar-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -40,51 +34,31 @@
             height: 100%;
             position: relative;
         }
-
         .navbar-brand {
             color: white;
             font-size: 1.5rem;
             text-decoration: none;
             font-weight: bold;
-            font-family: '拾陆字濑户2.0', sans-serif;
             letter-spacing: 1px;
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
             height: 100%;
-                line-height: 20px;
-            }
-
-            .navbar-brand span {
-                display: inline-block;
-                position: relative;
-                top: 4px;
         }
-
-        .navbar-brand img {
-            display: block;
-            margin: auto 0;
-        }
-
         .navbar-menu {
             display: flex;
             gap: 1rem;
-            align-items: center;
-            height: 100%;
+            align-items: center
         }
-
         .navbar-menu a {
             color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
             transition: color 0.3s ease;
         }
-
         .navbar-menu a:hover {
             color: #ddd;
         }
-
         .navbar-toggle {
             display: none;
             background: none;
