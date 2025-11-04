@@ -161,6 +161,7 @@
         </div>
     </nav>
     <div class="home-content" style="text-align: center;">
+        <p>最新提交：<code id="commit-id">加载中...</code></p>
         <p>欢迎来到冰与火之舞中文魔改社区<br>
             可跳转下载页下载魔改谱面文件<br>
             <br>
@@ -175,6 +176,13 @@
 	</div>
 
     <script>
+    fetch('https://api.github.com/repos/用户名/仓库名/commits')
+  .then(response => response.json())
+  .then(data => {
+    const latestCommit = data[0].sha.substring(0, 7); // 取前7位
+    document.getElementById('commit-id').textContent = latestCommit;
+  });
+
         function toggleMenu() {
             const menu = document.querySelector('.navbar-menu');
             menu.classList.toggle('active');
