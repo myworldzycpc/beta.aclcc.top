@@ -159,3 +159,14 @@
     text-decoration: none;
     text-align: center;
 }
+/* 主标题样式 */
+.main-title {
+    font-size: 3rem;
+    text-align: center;
+    background: #00ccff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    font-family: '拾陆字濑户2.0', sans-serif;
+}
