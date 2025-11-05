@@ -1,7 +1,6 @@
         @font-face {
             font-family: '拾陆字濑户2.0';
             src: url('data/fonts/拾陆字濑户2.0.ttf') format('truetype');
-            font-weight: bold;
             font-style: normal;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
