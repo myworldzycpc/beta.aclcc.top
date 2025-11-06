@@ -73,9 +73,6 @@
                 background-color: #004297;
                 flex-direction: column;
                 padding: 1rem;
-
-
-
             }
 
             .navbar-menu.active {
@@ -163,4 +160,42 @@
     color: transparent;
     font-weight: 900;
     font-family: '拾陆字濑户2.0', sans-serif;
+}
+/* 默认隐藏移动端内容 */
+.mobile {
+  display: none;
+}
+
+/* 默认显示桌面端内容 */
+.desktop {
+  display: block;
+}
+
+/* 当屏幕宽度小于768px时，显示移动端内容，隐藏桌面端内容 */
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}
+.curse-bg {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.curse-title {
+    margin: 0 0 12px 0;
+    text-align: center;
+    font-weight: normal;
+}
+.desktop-style {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
 }
