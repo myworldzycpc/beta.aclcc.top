@@ -4,9 +4,16 @@
     src: url('data/fonts/拾陆字濑户2.0.ttf') format('truetype');
     font-style: normal;
 }
-@font-face {
+@font-face
+{
     font-family: 'MPLUSRounded1c-Bold';
     src: url('data/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face
+{
+    font-family: '站酷快乐体';
+    src: url('data/fonts/站酷快乐体.ttf') format('truetype');
     font-style: normal;
 }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -136,7 +143,7 @@ body {
         
 .home-description {
     font-size: 1.5rem;
-    color: #a0e6ff;
+    color: #ffffff;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -155,12 +162,12 @@ body {
 .main-title {
     font-size: 3rem;
     text-align: center;
-    background: #00ccff;
+    background: #0095ff;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: 900;
-    font-family: '拾陆字濑户2.0', sans-serif;
+    font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
 }
 /* 默认隐藏移动端内容 */
 .mobile {
@@ -182,7 +189,7 @@ body {
   }
 }
 .curse-bg {
-    background: #ffffff;
+    background: #0099ff;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
@@ -192,11 +199,49 @@ body {
 }
 .curse-title {
     margin: 0 0 12px 0;
+    text-align: left;
+    font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
+}
+.curse-title-mobile {
+    font-size: 1.5rem;
+    margin: 0 0 12px 0;
     text-align: center;
     font-weight: normal;
+    font-family: '站酷快乐体', sans-serif;
+}
+.curse-intro-1 {
+    text-align: left;
+    margin-bottom: 12px;
+}
+.curse-intro-2 {
+    margin-bottom: 12px;
 }
 .desktop-style {
     display: flex;
     align-items: flex-start;
     gap: 32px;
+}
+/* 可伸缩列表（Accordion）简易样式，作用域限定在 curse-bg 内 */
+.curse-bg details {
+    background: #00c3ff;
+    padding: 4px 6px;
+    border: 0px solid rgba(0,0,0,0.06);
+}
+.curse-bg summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    padding: 4px 0;
+    font-weight: normal;
+    outline: none;
+}
+.curse-bg details[open] {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.curse-bg .accordion-content {
+    padding-top: 8px;
+    color: #000000;
+    text-align: left;
+    line-height: 1.6;
 }
