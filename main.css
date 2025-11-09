@@ -200,11 +200,13 @@ body {
 .curse-title {
     margin: 0 0 12px 0;
     text-align: left;
+    color: #ffffff;
     font-weight: normal;
     font-family: '站酷快乐体', sans-serif;
 }
 .curse-title-mobile {
     font-size: 1.5rem;
+    color: #ffffff;
     margin: 0 0 12px 0;
     text-align: center;
     font-weight: normal;
@@ -212,9 +214,11 @@ body {
 }
 .curse-intro-1 {
     text-align: left;
+    color: #ffffff;
     margin-bottom: 12px;
 }
 .curse-intro-2 {
+    color: #ffffff;
     margin-bottom: 12px;
 }
 .desktop-style {
