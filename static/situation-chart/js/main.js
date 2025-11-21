@@ -2,7 +2,7 @@
 This work is dedicated to the public domain. For details, see the LICENSE file in the project root.
  */
 
-let width = window.innerWidth, height = window.innerHeight;
+let width = window.innerWidth, height = window.innerHeight - 60;
 
 let nodes = [];
 let links = [];
@@ -228,7 +228,7 @@ function resizeSvg(newWidth, newHeight) {
 
 window.addEventListener("resize", () => {
     const newWidth = window.innerWidth;
-    const newHeight = window.innerHeight;
+    const newHeight = window.innerHeight - 60;
     resizeSvg(newWidth, newHeight);
 });
 
