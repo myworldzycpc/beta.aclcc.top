@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/common/lib/d3js/d3.v5.min.js"></script>
+    <script src="../static/situation-chart/js/data.js"></script>
+    <title>时局图</title>
+    <!--
+     This work is dedicated to the public domain.
+     For details, see the LICENSE file in the project root.
+    -->
+    <link rel="stylesheet" href="../main.css" type="text/css">
+    <link rel="stylesheet" href="../static/situation-chart/css/main.css">
+</head>
+<!-- 顶栏 -->
+<body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="https://qm.qq.com/q/ojkPMpJdvy" target="_blank" class="navbar-brand"><img src="../data/in-web-icon.png" width="25" height="25"><span>ACLCC</span></a>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <div class="navbar-menu">
+            <a href="../curses.html">魔改合集</a>
+            <a href="">语法wiki</a>
+            <a href="">友情链接</a>
+            <a href="">成员</a>
+        </div>
+    </div>
+</nav><!-- 可更改的内容 -->
+<div class="container" id="container"></div>
+<div class="tips">提示：按住节点可以拖动，悬停节点可以突出显示相关节点和边</div>
+<div class="options">
+    <label>
+        <input type="checkbox" id="level-sized" checked>
+        <span>按成员等级大小显示节点</span>
+    </label>
+</div>
+<script src="../static/situation-chart/js/main.js"></script>
+</body>
+</html>

@@ -1,19 +1,19 @@
 @font-face
 {
     font-family: '拾陆字濑户2.0';
-    src: url('data/fonts/拾陆字濑户2.0.ttf') format('truetype');
+    src: url('/data/fonts/拾陆字濑户2.0.ttf') format('truetype');
     font-style: normal;
 }
 @font-face
 {
     font-family: 'MPLUSRounded1c-Bold';
-    src: url('data/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
+    src: url('/data/fonts/MPLUSRounded1c-Bold.ttf') format('truetype');
     font-style: normal;
 }
 @font-face
 {
     font-family: '站酷快乐体';
-    src: url('data/fonts/站酷快乐体.ttf') format('truetype');
+    src: url('/data/fonts/站酷快乐体.ttf') format('truetype');
     font-style: normal;
 }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -98,7 +98,7 @@
 body {
     padding-top: 6rem;
     min-height: 100vh;
-    background-image: url('data/backgruond.jpg');
+    background-image: url('/data/backgruond.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

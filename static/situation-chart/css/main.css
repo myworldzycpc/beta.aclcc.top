@@ -1,0 +1,44 @@
+/*
+This work is dedicated to the public domain. For details, see the LICENSE file in the project root.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+.chart {
+    background-image: url("../img/backgruond.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+}
+
+.tips {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90vw;
+    padding: 10px;
+    color: #ffffff80;
+    user-select: none;
+    pointer-events: none;
+}
+
+.options {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #ffffff80;
+    user-select: none;
+}
