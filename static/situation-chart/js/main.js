@@ -12,7 +12,7 @@ for (const id in groups) {
         "id": `group_${id}`,
         "title": group.name,
         "color": "#FF3030",
-        "size": (group.sizeOverride || group.memberCount) / 2 + 10
+        "size": Math.sqrt((group.sizeOverride || group.memberCount)) * 2 + 5
     })
 }
 for (const id in members) {
