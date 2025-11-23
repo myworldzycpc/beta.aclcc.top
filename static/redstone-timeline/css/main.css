@@ -1,0 +1,54 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    /* 关键：让元素支持伪元素水平对齐 */
+    display: inline-flex; /* 或 inline-block */
+    align-items: center; /* 垂直居中（Flex 模式下） */
+    padding-left: 8px; /* 可选：给圆留左侧空间（避免贴边） */
+    font-weight: bold;
+}
+
+/* 生成左侧圆形 */
+.title::before {
+    content: ""; /* 伪元素必须有 content（空值也可） */
+    display: inline-block; /* 让元素可设置宽高 */
+    width: 12px; /* 圆的直径 */
+    height: 12px; /* 与宽度一致才是正圆 */
+    border-radius: 50%; /* 关键：将方块变成圆形 */
+    background-color: #42b983; /* 圆的颜色（可自定义） */
+    margin-right: 8px; /* 圆与右侧内容的间距 */
+}
+
+.content {
+    margin-left: 12px;
+    border-left: 4px solid #0080FF;
+    padding-left: 12px;
+}
+
+.text-muted {
+    color: #6c757d;
+    font-style: italic;
+}
+
+a {
+    color: #0091ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
